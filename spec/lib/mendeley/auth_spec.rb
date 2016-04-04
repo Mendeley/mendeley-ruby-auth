@@ -12,7 +12,7 @@ RSpec.describe Mendeley::Auth do
   } }
   let(:client_id) { ENV["MENDELEY_API_CLIENT_ID"] }
   let(:client_secret) { ENV["MENDELEY_API_CLIENT_SECRET"] }
-  let(:site) { "https://api-staging.mendeley.com" }
+  let(:site) { "https://api.mendeley.com" }
   let(:redirect_url) { "http://localhost:9292/oauth2/callback" }
   let(:email) { }
   let(:password) { }
