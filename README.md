@@ -1,6 +1,6 @@
 # Mendeley::Auth
 
-Welcome to Mendeley:Auth! This gem will provide you with A simple library to obtain client credentials or implicit oauth tokens to access the Mendeley API.
+Welcome to Mendeley:Auth! This gem will provide you with a simple library to help you in using the [Implicit Authorisation Flow](http://dev.mendeley.com/reference/topics/authorization_implicit.html) and the [Client Credentials Flow](http://dev.mendeley.com/reference/topics/authorization_client_credentials.html) to access the Mendeley API.
 
 ## Installation
 
