@@ -1,6 +1,6 @@
 # Mendeley::Auth
 
-Welcome to Mendeley:Auth! This gem will provide you with an api-cient to make requests against the mendeley api.
+Welcome to Mendeley:Auth! This gem will provide you with A simple library to obtain client credentials or implicit oauth tokens to access the Mendeley API.
 
 ## Installation
 
