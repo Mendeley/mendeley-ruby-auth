@@ -61,5 +61,5 @@ module Mendeley
     def http_client
       @http_client ||= Faraday.new(:url => oauth_client.site)
     end
- end
+  end
 end

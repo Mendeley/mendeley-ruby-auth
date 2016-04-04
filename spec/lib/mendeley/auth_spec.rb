@@ -10,8 +10,8 @@ RSpec.describe Mendeley::Auth do
     :email => email,
     :password => password
   } }
-  let(:client_id) { ENV["MENDELEY_API_CLIENT_ID"] }
-  let(:client_secret) { ENV["MENDELEY_API_CLIENT_SECRET"] }
+  let(:client_id) { "123456" }
+  let(:client_secret) { "123456" }
   let(:site) { "https://api.mendeley.com" }
   let(:redirect_url) { "http://localhost:9292/oauth2/callback" }
   let(:email) { }
@@ -35,30 +35,11 @@ RSpec.describe Mendeley::Auth do
     end
 
     context "with username and password" do
-      let(:email) { ENV["MENDELEY_API_USERNAME"] }
-      let(:password) { ENV["MENDELEY_API_PASSWORD"] }
+      let(:email) { "example@mendeley.com" }
+      let(:password) { "itsasecret" }
 
       it "returns :implicit" do
         expect(auth.grant_type).to eq(:implicit)
-      end
-    end
-  end
-
-  describe "#token / #grant_type" do
-    context "without username and password" do
-      it "returns a 'client credentials' token" do
-        expect(auth.token).to_not be_nil
-        expect { auth.token.get("/profiles/me") }.to raise_error(OAuth2::Error, /No userid/)
-      end
-    end
-
-    context "with username and password" do
-      let(:email) { ENV["MENDELEY_API_USERNAME"] }
-      let(:password) { ENV["MENDELEY_API_PASSWORD"] }
-
-      it "returns an 'implicit' token" do
-        expect(auth.token).to_not be_nil
-        expect(auth.token.get("/profiles/me").status).to eq(200)
       end
     end
   end
