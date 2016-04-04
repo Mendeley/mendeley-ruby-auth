@@ -1,5 +1,7 @@
 # Mendeley::Auth
 
+![Travis CI](https://travis-ci.org/Mendeley/mendeley-ruby-auth.svg?branch=master)
+
 Welcome to Mendeley:Auth! This gem will provide you with a simple library to help you in using the [Implicit Authorisation Flow](http://dev.mendeley.com/reference/topics/authorization_implicit.html) and the [Client Credentials Flow](http://dev.mendeley.com/reference/topics/authorization_client_credentials.html) to access the Mendeley API.
 
 ## Installation
